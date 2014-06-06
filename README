@@ -1,0 +1,33 @@
+lll-mode.el
+===============
+
+By Rob Myers <rob@robyers.org>
+
+Emacs support for editing Ethereum Low Level Language code.
+
+
+Installation
+============
+
+To install the Emacs major mode, add the file lll-mode.el to your Emacs
+load path. You can then load it by typing the following in Emacs:
+
+ M-x lll-mode
+
+Alternatively you can have Emacs load it automatically for files with a .lll
+extension by adding the following to your .emacs file:
+ 
+(require 'lll-mode)
+(add-to-list 'auto-mode-alist '("\\.lll$" . lll-mode))
+
+Electric Mode
+=============
+
+lll-mode works well with electric-pair mode from Emacs 24.1.
+To enable electric pair mode either:
+
+M-x electric-pair-mode
+
+or add the following to your .emacs file:
+
+(add-hook 'lll-mode-hook 'electric-pair-mode)
